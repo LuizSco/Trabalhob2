@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Loja</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <div id="carrinho">
+            <h2>Carrinho</h2>
+        </div>
+
+        <script>
+
+            exibeCarrinho = () => {
+                var containerCarrinho = document.getElementById('carrinho');
+
+                var items = JSON.parse( sessionStorage.items );
+
+                console.log(items);
+
+                containerCarrinho.innerHTML = "";
+                items.map((val)=>{
+                    if (val.quantidade > 0){
+                        containerCarrinho.innerHTML += `
+                        <p>Item:`+val.nome+` | Qtde:`+val.quantidade+`  </p>
+                        <hr>
+
+                        `;
+                    }
+                })
+            }
+
+            exibeCarrinho();
+
+        </script>
+
+    </body>
+</html>

@@ -29,7 +29,6 @@ body{
 	display: inline;
 	
 	
-	
 }
 #barraprincipal ul li a{
 	padding-right: 80px;
@@ -45,7 +44,7 @@ body{
 }
 
 #sobrenos{ 
-	width: 1350px;
+	width: 1400px;
 	height: 600px;
 	background-color: #C1CDCD;
 	color: black;
@@ -61,11 +60,53 @@ body{
 	
 }
 
-#formcad{ 
+#formcadastro{ 
 	width: 1350px;
 	height: 600px;
+	text-align: center;
+	padding: 20px;
+	background-color:  #C1CDCD ;
+	color: black; 
+
+}
+
+#cadastrofeito{ 
+	width: 1400px;
+	height: 600px;
+	padding: 20px;
+	text-align: center;
 	background-color: #C1CDCD;
 	color: black;
+	
+}
+
+#formcontato{ 
+	width: 1350px;
+	height: 600px;
+	padding: 20px;
+	text-align: center;
+	background-color:  #C1CDCD ;
+	color: black; 
+
+}
+
+#contatofeito{ 
+	width: 1400px;
+	height: 600px;
+	padding: 20px;
+	text-align: center;
+	background-color: #C1CDCD;
+	color: black;
+	
+}
+
+#infocontato{ 
+	width: 1350px;
+	height: 600px;
+	padding-bottom: 20px;
+	background-color:  #C1CDCD ;
+	color: black; 
+
 }
 
 #promocoes{
@@ -84,10 +125,11 @@ body{
 }
 
 #produtos{ 
-	width: 1350px;
-	height: 600px;
+	width: 1400px;
+	height: 9100px;
 	background-color: #C1CDCD;
 	color: black;
+	padding: 20px;
 }
 
 #textprod{
@@ -95,4 +137,11 @@ body{
 	margin-right: auto;
 	padding: 20px;
 	font-size: 20px;
+}
+
+#carrinho{
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 2%;
+	display: block;
 }
