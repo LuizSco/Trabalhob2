@@ -21,11 +21,19 @@
 				</nav>
 
 			</header>
-		
-			<div id="produtos"><h2>Carrinho</h2>
-				<div id="carrinho">
-				
+
+			<h2>Produtos</h2>
+
+			<div id="produtos">
+				<div id="carrinho"></div>
 			</div>
+			
+			<div id="caixa-de-compra">
+				<h2>Carrinho</h2>
+				<div id="comprar">Sem Produtos..</div>
+			</div>
+			
+			<button type="submit" id="comprar-pro"><p>Comprar</p></button>
 
 			<script>
 	
@@ -88,23 +96,22 @@
                 items.map((val)=>{
                     containerProdutos.innerHTML += `
                     
-                    <div class="img">
+                    <div>
 						<img src="`+val.img+`" class="produto"/>
-						<div>
-                        <p>`+val.nome+`</p>
+						<p>`+val.nome+`</p>
 						<a key="`+val.id+`" class="in-comprar" href="#">Comprar</a>
-						</div>
                     </div>
                     `;
                 })
 
             }
 
-            inicializarLoja();
-
+			inicializarLoja();
+			
+			document.getElementById('carrinho').remove()
 
             atualizarCarrinho = () => {
-                var containerCarrinho = document.getElementById('carrinho');           // <!--inicia o id carrinho na linha 28-->
+                var containerCarrinho = document.getElementById('comprar');           // <!--inicia o id carrinho na linha 28-->
 
                 sessionStorage.items = JSON.stringify(items);                          // <!--converte valores em JS para uma string JSON(notacao de objetos js)-->
 
@@ -112,9 +119,7 @@
                 items.map((val)=>{                                                     // <!-- map em js  retorna o valor do item equivalente no array resultante-->
                     if (val.quantidade > 0){
                         containerCarrinho.innerHTML += `
-                        <p>Item:`+val.nome+` | Qtde:`+val.quantidade+`  </p>
-                        <hr>
-
+                        <p>Item: `+val.nome+` | Qtde:`+val.quantidade+`</p>
                         `;
                     }
                 })

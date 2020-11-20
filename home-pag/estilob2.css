@@ -28,6 +28,18 @@ h1 {
 	margin-left: 10px;
 	margin-top: 100px;
 }
+
+h2 {
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	font-size: 1.5rem;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+  }
 /*cabeçalho*/
 .barraprincipal {
 	display: flex;
@@ -73,27 +85,74 @@ h1 {
 }
 /*produtos*/
 
-#produtos{ 
-	width: auto;
-	height: 100%;
-	background-color: #C1CDCD;
-	color: black;
-	padding: 20px;
-	align-items: center;
+#produtos { 
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 60%;
+	margin: 0 auto;
 }
 
-.produto {
-	width: 40%;
-	height: 40%;
+#produtos > div {
+	flex: 1 1 200px;
+	margin: 10px;
 }
 
-.produto a {
-	display: inline; 
+#produtos a {
+	color: #4682B4;
 }
-.img {
-	overflow: hidden;
-	
- }
+/*carrinho*/
+#caixa-de-compra {
+	background-color: white;
+	border: 3px solid #000000dc; 
+	width: 17%;
+	height: 75%;
+	float: right;
+	position: fixed;
+    right: 0;
+    top: 25%;
+    flex-direction: column;
+}
+
+#caixa-de-compra h2 {
+	float: inline-start;
+	margin-top: -23%;
+} 
+
+#comprar {
+	width: 90%;
+	margin: 5%;
+	margin-top: 23%;
+}
+
+#comprar p {
+	font-size: 1rem;
+	margin-bottom: 10%;
+}
+
+#comprar p:hover {
+	color: #4682B4;
+}
+
+#comprar-pro {
+	position: fixed;
+	width: 10%;
+	height: 5%;
+	right: 4%;
+	top: 90%;
+
+	padding: 0;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	border-radius: 10px;
+}
+
+#comprar-pro:hover {
+	color: #4682B4;
+}
+
  /*daqui pra baixo, nem mexi*/
 
 #carrinho {
