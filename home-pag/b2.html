@@ -7,34 +7,35 @@
 	</head>
 		<body>
 		
-			<div id="barraprincipal">
-				<h2>Janis's Store</h2>
-				<nav>  												<!-- aponta para uma secao com links de navegacao-->
-						<ul id="botoes">
-					<li><a href="/sobrenos.html">Sobre Nós</a></li>
-					<li><a href="/contatos.html">Contatos</a></li>
-					<li><a href="/cadastro.html">Cadastro</a></li>
-					<li><a href="/promocoes.html">Promocoes</a></li>
-					<li><a href="/areadocliente">Area do Cliente</a></li>
-					<li><a href="/carrinho.html">Carrinho</a></li>
-						</ul>
+			<header class="barraprincipal">
+				<a href="/home-pag/b2.html" id="logo">Janis's Store</a>  
+				<nav>												<!-- aponta para uma secao com links de navegacao-->
+				<ul class="botoes">
+					<li><a href="/sobrenos.html" class="links">Sobre Nós</a></li>
+					<li><a href="/contatos.html" class="links">Contatos</a></li>
+					<li><a href="/cadastro.html" class="links">Cadastro</a></li>
+					<li><a href="/promocoes.html" class="links">Promocoes</a></li>
+					<li><a href="/areadocliente" class="links">Area do Cliente</a></li>
+					<li><a href="/carrinho.html" class="links">Carrinho</a></li>
+				</ul>
 				</nav>
 
-			</div>
+			</header>
 		
-
-			<div id="produtos">
+			<div id="produtos"><h2>Carrinho</h2>
 				<div id="carrinho">
-				<h2>Carrinho</h2>
+				
 			</div>
-	
+
 			<script>
 	
 				const items = [
 				{
 						id: 0,
+						class: "produto",
 						img: "./img/camisetabobmascw.jpg",
 						nome: "Camiseta Masculina Bob Marley Branca",
+						
 						quantidade: 0
 					},
 					{
@@ -87,10 +88,12 @@
                 items.map((val)=>{
                     containerProdutos.innerHTML += `
                     
-                    <div class="produto-single">
-                        <img src="`+val.img+`" />
+                    <div class="img">
+						<img src="`+val.img+`" class="produto"/>
+						<div>
                         <p>`+val.nome+`</p>
-                        <a key="`+val.id+`" href="#">Comprar</a>
+						<a key="`+val.id+`" class="in-comprar" href="#">Comprar</a>
+						</div>
                     </div>
                     `;
                 })
